@@ -15,13 +15,13 @@ For this to happen, you need to add extra permisions in the AndroidManifest.xml
 <uses-permission android:name="android.permisson.BLUETOOTH"/>
 
 ``` 
-## History
+### History
 
 Bluetooth was first invented in 1994 by a man named Dr. Jaap Hartsen while working at Erricson.  Bluetooth has been available in the android studio from Android 2.0 éclair(API 5) but Bluetooth low energy support only from Android 4.3 Jelly Bean (API 18). The native Bluetooth stack is qualified for Bluetooth 5 in Android 8.0 . all devices need to have Bluetooth 5 qualified chipset in order to use the available Bluetooth 5 features.</br>
 
 
-## Major methods & Attributes </br>
-i)	BroadcastReicvers.    </br>
+### Major methods & Attributes </br>
+## i)	BroadcastReicvers.    </br>
 I have used different methods throughout my project. Broadcast receivers have come in hand to catch the state change and log them. The first one is for ACTION_FOUND.
 ```
 
@@ -169,10 +169,10 @@ private final BroadcastReceiver mBroadcastReceiver4 = new BroadcastReceiver() {
 };
 
 ```
-ii)	Protected methods </br>
+## ii)	Protected methods </br>
 protected void onDestroy() //  is called when activity is finishing.  </br>
  
-iii)	Public methods.     </br>
+## iii)	Public methods.     </br>
 public void onReceive(Context context, Intent intent)// is called when broadcast receiver is receiving an intent broadcast </br>
 
 public void enabledisable() // I have used this method to enable bluetooth if it is dibaled and disable if it is enable. </br>
@@ -180,7 +180,7 @@ private void checkBTPermissions()// check the permissions for bluetooth.   </br>
 	
 
 
-iv)	Constants </br>
+## iv)	Constants </br>
 I have used several constants throughout my project.  They include:     </br>
 ACTION_STATE_CHANGED // This notifies that Bluetooth status has been changed.     </br>
 ACTION_SCAN_MODE_CHANGED // This notifies whenever the scan mode changes.        </br>
