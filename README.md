@@ -1,4 +1,4 @@
-# LumiBT
+# Bluetooth
 
 Introduction
 
