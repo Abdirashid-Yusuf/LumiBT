@@ -2,7 +2,7 @@
 
 Introduction
 
-Bluetooth is a way to send and receive data between two different devices. Android platform includes support for the Bluetooth framework that allows devices to wirelessly exchange data with other Bluetooth devices. We can enable Bluetooth using the Bluetooth adapater class
+Bluetooth is a way to send and receive data between two different devices over short distance. Android platform includes support for the Bluetooth framework that allows devices to wirelessly exchange data with other Bluetooth devices. It can also be used for connecting to devices with Bluetooth capability for wireless audio transmission. We can enable Bluetooth using the Bluetooth adapter class
 ```
 BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
 adapter.enable();
@@ -17,10 +17,7 @@ For this to happen, you need to add extra permisions in the AndroidManifest.xml
 ``` 
 History
 
-
-
-
-
+Bluetooth was first invented in 1994 by a man named Dr. Jaap Hartsen while working at Erricson.  Bluetooth has been available in the android studio from Android 2.0 éclair(API 5) but Bluetooth low energy support only from Android 4.3 Jelly Bean (API 18). The native Bluetooth stack is qualified for Bluetooth 5 in Android 8.0 . all devices need to have Bluetooth 5 qualified chipset in order to use the available Bluetooth 5 features.
 
 
 Major methods & Attributes
@@ -112,7 +109,7 @@ private BroadcastReceiver mBroadcastReceiver3 = new BroadcastReceiver() {
 
 
 ```
-This method is executed by btnDiscover() method
+This method is executed by a call to btnDiscover() method
 
 
 ```
@@ -172,10 +169,35 @@ private final BroadcastReceiver mBroadcastReceiver4 = new BroadcastReceiver() {
 };
 
 ```
+ii)	Protected methods
+protected void onDestroy() //  is called when activity is finishing
+ 
+iii)	Public methods
+public void onReceive(Context context, Intent intent)// is called when broadcast receiver is receiving an intent broadcast
 
-ii)	Public Methods
+public void enabledisable() // I have used this method to enable bluetooth if it is dibaled and disable if it is enable
+private void checkBTPermissions()// check the permissions for bluetooth
+	
 
-public void enabledisable()
+
+iv)	Constants
+I have used several constants throughout my project.  They include: 
+ACTION_STATE_CHANGED // This notifies that Bluetooth status has been changed
+ACTION_SCAN_MODE_CHANGED // This notifies whenever the scan mode changes
+ACTION_FOUND //This is used for receiving information about each found device
+ACTION_BOND_STATE_CHANHGE // this indicate change in the bond state of the device
+
+
+Note: Apart from the main class I have written a class DeviceListAdapter  to store devices
+			Refferences
+
+I have used the following websites for guidance:
+i)	https://developer.android.com/guide/topics/connectivity/bluetooth
+ii)	https://www.tutorialspoint.com/android/android_bluetooth.htm
+
+
+
+
 
 
 
