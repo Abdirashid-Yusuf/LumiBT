@@ -1,6 +1,6 @@
 # Bluetooth
 
-Introduction
+## Introduction
 
 Bluetooth is a way to send and receive data between two different devices over short distance. Android platform includes support for the Bluetooth framework that allows devices to wirelessly exchange data with other Bluetooth devices. It can also be used for connecting to devices with Bluetooth capability for wireless audio transmission. We can enable Bluetooth using the Bluetooth adapter class
 ```
@@ -15,13 +15,13 @@ For this to happen, you need to add extra permisions in the AndroidManifest.xml
 <uses-permission android:name="android.permisson.BLUETOOTH"/>
 
 ``` 
-History
+## History
 
-Bluetooth was first invented in 1994 by a man named Dr. Jaap Hartsen while working at Erricson.  Bluetooth has been available in the android studio from Android 2.0 éclair(API 5) but Bluetooth low energy support only from Android 4.3 Jelly Bean (API 18). The native Bluetooth stack is qualified for Bluetooth 5 in Android 8.0 . all devices need to have Bluetooth 5 qualified chipset in order to use the available Bluetooth 5 features.
+Bluetooth was first invented in 1994 by a man named Dr. Jaap Hartsen while working at Erricson.  Bluetooth has been available in the android studio from Android 2.0 éclair(API 5) but Bluetooth low energy support only from Android 4.3 Jelly Bean (API 18). The native Bluetooth stack is qualified for Bluetooth 5 in Android 8.0 . all devices need to have Bluetooth 5 qualified chipset in order to use the available Bluetooth 5 features.</br>
 
 
-Major methods & Attributes
-i)	BroadcastReicvers
+## Major methods & Attributes </br>
+i)	BroadcastReicvers.    </br>
 I have used different methods throughout my project. Broadcast receivers have come in hand to catch the state change and log them. The first one is for ACTION_FOUND.
 ```
 
@@ -169,32 +169,33 @@ private final BroadcastReceiver mBroadcastReceiver4 = new BroadcastReceiver() {
 };
 
 ```
-ii)	Protected methods
-protected void onDestroy() //  is called when activity is finishing
+ii)	Protected methods </br>
+protected void onDestroy() //  is called when activity is finishing.  </br>
  
-iii)	Public methods
-public void onReceive(Context context, Intent intent)// is called when broadcast receiver is receiving an intent broadcast
+iii)	Public methods.     </br>
+public void onReceive(Context context, Intent intent)// is called when broadcast receiver is receiving an intent broadcast </br>
 
-public void enabledisable() // I have used this method to enable bluetooth if it is dibaled and disable if it is enable
-private void checkBTPermissions()// check the permissions for bluetooth
+public void enabledisable() // I have used this method to enable bluetooth if it is dibaled and disable if it is enable. </br>
+private void checkBTPermissions()// check the permissions for bluetooth.   </br>
 	
 
 
-iv)	Constants
-I have used several constants throughout my project.  They include: 
-ACTION_STATE_CHANGED // This notifies that Bluetooth status has been changed
-ACTION_SCAN_MODE_CHANGED // This notifies whenever the scan mode changes
-ACTION_FOUND //This is used for receiving information about each found device
-ACTION_BOND_STATE_CHANHGE // this indicate change in the bond state of the device
+iv)	Constants </br>
+I have used several constants throughout my project.  They include:     </br>
+ACTION_STATE_CHANGED // This notifies that Bluetooth status has been changed.     </br>
+ACTION_SCAN_MODE_CHANGED // This notifies whenever the scan mode changes.        </br>
+ACTION_FOUND //This is used for receiving information about each found device.      </br>
+ACTION_BOND_STATE_CHANHGE // this indicate change in the bond state of the device.  </br>
 
 
 Note: Apart from the main class I have written a class DeviceListAdapter  to store devices
-			Refferences
 
-I have used the following websites for guidance:
-i)	https://developer.android.com/guide/topics/connectivity/bluetooth
-ii)	https://www.tutorialspoint.com/android/android_bluetooth.htm
+			### Refferences
 
+I have used the following websites for guidance:  </br>
+i)	https://developer.android.com/guide/topics/connectivity/bluetooth.     </br>
+ii)	https://www.tutorialspoint.com/android/android_bluetooth.htm.       </br>
+    
 
 
 
